@@ -7,12 +7,7 @@ import { CoursesService } from './course/courses.service';
   template: `
 
   <h2> LIKES Assignment </h2>
-  <div
-    (click)="liked = !liked"
-    [style.backgroundColor]="liked ? 'aquamarine' : 'grey'"
-  >
-  LIKES
-  </div>
+
 
   <h2> title casing </h2>
 
@@ -67,7 +62,6 @@ export class CoursesComponent {
 
   email: string = "me@example.com";
   isActive: boolean = true;
-  liked: boolean = false;
 
   text = `
   This is a bunch of words to test piping. What else shoould I write here??
@@ -79,9 +73,7 @@ export class CoursesComponent {
     price: 190.95,
     releaseDate: new Date(2016, 3, 1)
   }
-  toggleDivColor() {
-    this.liked = !this.liked;
-  }
+
   onSave($event) {
     $event.stopPropagation();
     console.log("Button was clicked", $event);

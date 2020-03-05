@@ -1,0 +1,12 @@
+
+<div>
+  <fa-icon
+    class="like-btn"
+    [icon]="faHeart"
+    [style.color]="isActive ? 'magenta': '#ccc'"
+    (click)="onClick()"
+  >
+  </fa-icon>
+
+  <span class="like-count">{{ likeCount }}</span>
+</div>

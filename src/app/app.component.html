@@ -1,5 +1,13 @@
 <h1>Angular</h1>
+<app-like
+  [like-count]="tweet.likesCount"
+  [is-active]="tweet.isLiked"
+></app-like>
 
+<favorite
+  [isFavorite]="post.isFavorite"
+  (change)="onFavoriteChange($event)"></favorite>
 <courses></courses>
 
 <authors></authors>
+
